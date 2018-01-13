@@ -11,11 +11,9 @@
 -- ---------------------------------------------------------
 
 
--- Dump data of "Role" -------------------------------------
-INSERT INTO `Role`(`id`,`role`) VALUES ( '4', 'admin' );
-INSERT INTO `Role`(`id`,`role`) VALUES ( '1', 'employee' );
-INSERT INTO `Role`(`id`,`role`) VALUES ( '2', 'finance' );
-INSERT INTO `Role`(`id`,`role`) VALUES ( '3', 'hr' );
+-- Dump data of "Position" ---------------------------------
+INSERT INTO `Position`(`id`,`position`) VALUES ( '2', 'Руководитель' );
+INSERT INTO `Position`(`id`,`position`) VALUES ( '1', 'Сотрудник' );
 -- ---------------------------------------------------------
 
 
