@@ -22,7 +22,7 @@
             <c:forEach items="${pageContext.request.getAttribute('employeeList')}" var="item">
             <tr>
                 <th>${item.firstname} ${item.lastname}</th>
-                <th>${item.position}</th>
+                <th>${item.position.position}</th>
                 <th>${item.phone}</th>
                 <th>${item.city}</th>
                 <th>${item.salary}</th>

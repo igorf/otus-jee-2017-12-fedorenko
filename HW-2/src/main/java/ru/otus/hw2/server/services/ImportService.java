@@ -46,7 +46,7 @@ public class ImportService {
                 result.setLogin(parts[4]);
                 result.setPassword(parts[5]);
                 result.setPhone(parts[6]);
-                result.setPosition(parts[7]);
+                result.setPosition(PositionService.getInstance().positionByID(Long.valueOf(parts[7])));
                 result.setUnit(parts[8]);
                 result.setRole(RoleService.getInstance().roleByID(Long.valueOf(parts[9])));
                 result.setSalary(Integer.valueOf(parts[10]));

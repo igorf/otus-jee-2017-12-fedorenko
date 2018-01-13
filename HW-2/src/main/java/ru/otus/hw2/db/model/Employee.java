@@ -26,11 +26,13 @@ public class Employee {
     String unit;
     @Column(nullable = false)
     String city;
-    @Column(nullable = false)
-    String position;
     Integer salary;
 
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = true)
     Role role;
+
+    @ManyToOne
+    @JoinColumn(name = "position_id", nullable = true)
+    Position position;
 }
