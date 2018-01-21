@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Чтение из xml</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.fileinput.js"></script>
+	<script>
+		$(document).ready(function(){
+			var fileExtensionError = $('#fileExtensionError');
+			
+			var fileInput = $('#file');
+			fileInput.bootstrapFileInput();
+			fileInput.on('change', function(){
+				fileExtensionError.hide();
+				if (!fileInput.val().match(/\.xml$/)) {
+					fileExtensionError.show();
+					return;
+				}
+				this.form.submit();
+			});
+		});
+	</script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<form enctype="multipart/form-data" action="/xml2jsonfile" method="post">
+			<div id="fileExtensionError" class="label label-default error">*выберите xml-файл</div>
+			<label class="btn btn-default btn-file blockLabel" for="file">
+				XML входной файл:
+				<input type="file" id="file" name="file" title="Загрузить" data-filename-placement="inside" data-fv-file-extension="xml" accept=".xml">
+			</label>
+		</form>
+	</div>
+</body>
+</html>
