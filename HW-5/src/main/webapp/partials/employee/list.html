@@ -1,0 +1,20 @@
+<table class="table">
+    <tr>
+        <td colspan="9"><h3>Employee list</h3></td>
+    </tr>
+    <tr ng-repeat="emp in employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.city}}</td>
+        <td>{{emp.firstname}}</td>
+        <td>{{emp.lastname}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.login}}</td>
+        <td>{{emp.position.position}}</td>
+        <td>{{emp.role.role}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewEmployee({id:emp.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteEmployee(emp)">Delete</a>
+        </td>
+    </tr>
+</table>
+<a ui-sref="newEmployee" class="btn-primary btn nodecoration">Add New Employee</a>

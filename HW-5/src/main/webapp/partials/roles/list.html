@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <td colspan="3"><h3>Roles list</h3></td>
+    </tr>
+    <tr ng-repeat="rol in roles">
+        <td>{{rol.id}}</td>
+        <td>{{rol.role}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewRole({id:rol.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteRole(rol)">Delete</a>
+        </td>
+    </tr>
+</table>
+<a ui-sref="newRole" class="btn-primary btn nodecoration">Add New role</a>

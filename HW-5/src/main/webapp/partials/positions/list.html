@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <td colspan="3"><h3>Positions list</h3></td>
+    </tr>
+    <tr ng-repeat="pos in positions">
+        <td>{{pos.id}}</td>
+        <td>{{pos.position}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewPosition({id:pos.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deletePosition(pos)">Delete</a>
+        </td>
+    </tr>
+</table>
+<a ui-sref="newPosition" class="btn-primary btn nodecoration">Add New position</a>
